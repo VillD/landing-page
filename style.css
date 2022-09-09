@@ -1,0 +1,536 @@
+
+/*
+## Typography
+
+### Headings, Call-to-actions, Header Navigation
+
+- Family: [Raleway](https://fonts.google.com/specimen/Raleway)
+- Weights: 400, 700
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+*/
+
+*,
+*::after,
+*::before{
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+}
+:root{
+    /*Primary-Color*/
+    --veryDarkBlue: hsl(243, 87%, 12%);
+    --desaturatedBlue: hsl(238, 22%, 44%);
+
+    /*Accent-Color*/
+    --brightBlue: hsl(224, 93%, 58%);
+    --moderateCyan: hsl(170, 45%, 43%);
+
+    /*Neutral-Color*/
+    --lightGrayishBlue: hsl(240, 75%, 98%);
+    --lightGray: hsl(0, 0%, 75%);
+
+}
+body{
+    font-family: 'Raleway', sans-serif;
+    color: var(--desaturatedBlue);
+}
+main,section,footer{
+    width: 375px;
+    height: 100%;
+}
+.content-register{
+    text-align: center;
+    padding: 82px 22px 82px 22px;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+    padding: 22px;
+}
+.logo{
+    width: 100px; 
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 52px;
+
+}
+.menu_item{
+    height: 100%;
+    margin-right: 1em;
+    font-size: 14px;
+    font-weight: 400;
+}
+.menu_item:last-child{
+    margin-right: 0;
+}
+
+.image-accesibily{
+    max-width: 331px;
+    height: auto;
+    margin-bottom: 48px;
+}
+.accessibility_title{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.6em;
+    line-height: 1.6;
+    color: var(--veryDarkBlue);
+}
+.accessibility_paragraph{
+    margin:28px 0 28px 0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 1.6;    
+    font-size: 14px;
+    letter-spacing: .4px;
+    padding: 0 14px;
+}
+.register{
+    display: flex;
+    flex-direction: column;
+    
+}
+.register__email[type=email]{
+    margin: 0 14px 18px 14px;
+    padding: 0 14px;
+    height: 44px;
+    border: .1px solid var(--desaturatedBlue);
+    border-radius: 4px;
+}
+.register__email::placeholder{
+    color: var(--lightGray);
+}
+.register__btn[type=button]{
+    height: 44px;
+    margin: 0 14px 18px 14px;
+    background-color: var(--brightBlue);
+    color: var(--lightGrayishBlue);
+    border: 0;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    letter-spacing: .4px;
+    border-radius: 4px;
+}
+.productive{
+    background-color: var(--lightGrayishBlue);
+    padding: 82px 22px 42px 22px;
+    display: flex;
+    flex-direction: column;
+}
+.image-productive{
+    max-width: 331px;
+    height: auto;
+    margin-bottom: 48px;   
+}
+.curve{
+    max-width: 375px;
+    height: auto;
+    position: relative;
+    top: -100px;
+    transform: translateY(105px);
+    padding: 0;
+}
+.productive-title{
+    color: var(--veryDarkBlue);
+    text-align: center;
+    font-size: 1.2em;
+    margin-bottom: 28px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    letter-spacing: -.6px;
+}
+.productive-paragraph{
+    color: var(--veryDarkBlue);
+    font-weight: 400;
+    margin-bottom: 28px;
+    font-size:14px;
+    letter-spacing: .2px;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+.productive-paragraph +p{
+    margin-bottom: 28px;
+    font-size:14px;
+    letter-spacing: .2px;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+.references{
+    color: var(--moderateCyan);
+    
+    font-size:14px;
+    letter-spacing: .2px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-self: center;
+    
+}
+.references::before{
+    content: '';
+    width: 50%;
+    height: 1px;
+    background-color: var(--moderateCyan);
+    position: absolute;
+    top:20px;
+}
+.references > img{
+    width: 18px;
+    height: 18px;
+    margin-left: 8px;
+}
+.testimony{
+    margin: 32px 18px 32px 18px;
+    padding:0px 16px;
+    border-radius: 4px;
+    box-shadow: 0px 0px 22px hsla(0, 0%, 75%, 0.514);
+    height: 200px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    font-size:12px;
+    letter-spacing: .2px;
+    line-height: 1.6;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+.quotes{
+    width: 20px;
+}
+.testimony-person{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:start;
+}
+.testimony-name{
+    font-weight: 800;
+}
+.testimony-ocupation{
+    font-weight: 400;
+    font-size: 10px;
+}
+.testimony-avatar{
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius:50%;
+    margin-right: 8px;
+}
+.access{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 422px;
+    background-color: var(--desaturatedBlue);
+    
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color: var(--lightGrayishBlue);
+    
+    padding: 42px;
+    padding-bottom: 62px;
+}
+
+.content-access__title{
+    margin: 22px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.content-access__paragraph{
+    font-size:14px;
+    letter-spacing: .2px;
+    line-height: 1.6;
+    font-weight: 400;
+    margin-bottom: 22px;
+}
+.register__email--modify[type="email"],
+.register__btn--modify[type="button"]{
+    margin-right: 32px;
+    margin-left: 32px;
+}
+.register__btn--modify[type="button"]{
+    font-size: 14px;
+    font-weight: 700;
+}
+.register__email--modify[type="email"]{
+    font-family: 'Raleway', sans-serif;
+}
+
+.footer{
+    color: var(--lightGrayishBlue);
+    background-color: var(--veryDarkBlue);
+}
+.footer-nav{
+    padding: 62px 42px;
+}
+.footer-nav__logo div{
+    margin-bottom: 38px;
+}
+.contact{
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+.contact svg{
+    margin-right: 12px;
+}
+.menu-footer{
+    margin: 52px 0 42px 0;
+}
+.menu-footer .menu_item{
+    margin-bottom: 18px;
+}
+.menu-footer .menu_item a{
+    color: var(--lightGrayishBlue);
+    font-size: 18px;
+}
+
+
+
+.logo-svg path,
+.logo-facebook path,
+.logo-twitter path,
+.logo-instagram path{
+    fill: var(--lightGrayishBlue);
+}
+.menu-icons{
+    display: flex;
+    justify-content: center;
+}
+.menu-icons__item{
+    display: flex;
+}
+.logo-icons__socials{
+    border-radius: 50%;
+    border: 1px solid var(--lightGrayishBlue);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 8px;
+}
+.logo-icons__socials svg{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-attribution{
+    padding: 0 38px 62px 38px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.attribution{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.attribution a{
+    color: white;
+}
+.dev{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dev a{
+    color: white;
+}
+
+
+/*Desktop*/
+@media screen and (min-width:376px){
+    main,section,footer{
+        width: 100%;
+        height: 100%;
+    }
+    .header-nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 54px;
+    }
+    .logo{
+        width: 100%;
+    }
+    .menu_item{
+        margin-right: 2.5em;
+    }
+    .menu_item a{
+        font-size: 1.5em;
+    }
+    
+    .content-register{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 54px;
+        padding-top: 27px;
+        max-width: 100%;
+    }
+    .image-accesibily{
+        max-width: 50%;
+        height: auto;
+    }
+    .accessibility{
+        max-width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        font-size: 14px;
+    }
+    .accessibility_title{
+        font-size: 2.9em;
+        text-align: start;
+        font-family: 'Raleway', 
+        sans-serif;
+    }
+    .accessibility_paragraph{
+        font-size: 1.3em;
+        text-align: start;
+        padding: 0;
+    }
+    .register-xl{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 100%;
+        margin-right: 42px;
+    }
+    .register .register__emai[type="email"],
+    .register .register__btn[type=button]{
+        margin:0;
+
+    }
+    .register .register__email[type="email"]{
+        width: 60%;
+
+    }
+    .register .register__btn[type=button]{
+        width: 38%;
+    }
+    .curve{
+        min-width: 100%;
+        height: auto;
+        transform: translateY(142px);
+    }
+    .productive{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        padding: 54px;
+    }
+    .productive-content{
+        width: 50%
+    }
+    .productive-title{
+        text-align: start;
+        font-size: 2.5em;
+    }
+    .productive-paragraph{
+        font-size: 18px;
+        width: 82%;
+    }
+    
+    .productive-paragraph + p{
+        width: 82%;
+        font-size: 18px
+    }
+    .image-productive{
+        max-width: 45%;
+        height: auto;
+    }
+    .references{
+        font-size: 18px;
+        justify-content: start;
+    }
+    .references::before{
+        width: 25%;
+    }
+    .testimony{
+        font-size: 14px;
+        width: 50%;
+        margin: 32px 0;
+        padding: 18px;
+    }
+    .access{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 82px 54px 82px 54px;
+        height: 100%;
+        
+    }
+    .content-access{
+        width: 50%;
+    }
+    .content-access__title, 
+    .content-access__paragraph{
+        text-align: start;
+        margin: 0 0 22px 0;
+        
+    }
+    .content-access__title{
+        font-size: 2em;
+    }
+    .content-access__paragraph{
+        font-size: 1em;
+        width: 75%;
+    }
+
+    .access .register{
+        width: 50%;
+        
+    }
+    .register__email--modify[type=email]{
+        min-width: 80%;
+        margin: 0 20% 18px 0;
+    }
+    .footer{
+        padding: 116px 54px;
+    }
+    .footer-nav{
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    .content-menu__foter{
+        display: flex;
+        justify-content: space-around;
+        width: 50%;
+    }
+    .menu-footer{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .menu-icons{
+        align-self: center;
+    }
+    .content-attribution{
+        display: flex;
+        padding: 0 200px;
+        justify-content: space-around;
+    }
+    .attribution{
+        width: 50%;
+    }
+    .dev{
+        width: 50%;
+    }
+}
